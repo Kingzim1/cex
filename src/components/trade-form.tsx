@@ -23,6 +23,7 @@ export default function TradeForm() {
               <option value="MATIC">MATIC</option>
               <option value="USDC">USDC</option>
               <option value="USDT">USDT</option>
+              <option value="ZIMAX">ZIMAX</option>
             </select>
             <input
               type="number"
@@ -46,6 +47,7 @@ export default function TradeForm() {
               <option value="USDT">USDT</option>
               <option value="ETH">ETH</option>
               <option value="MATIC">MATIC</option>
+              <option value="ZIMAX">ZIMAX</option>
             </select>
             <input
               type="number"

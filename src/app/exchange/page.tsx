@@ -1,15 +1,16 @@
 "use client";
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useAccount, useBalance } from "wagmi";
+import { useAccount } from "wagmi";
 import { polygon } from "wagmi/chains";
+import { useBalance } from "wagmi";
 import BalanceDisplay from "@/components/balance-display";
 import TransferForm from "@/components/transfer-form";
 import TradeForm from "@/components/trade-form";
 
 export default function ExchangePage() {
   const { address, isConnected } = useAccount();
-  const { data: balanceData } = useBalance({
+  const { data: maticBalance } = useBalance({
     address,
     chainId: polygon.id,
     query: { enabled: !!address },
@@ -25,7 +26,7 @@ export default function ExchangePage() {
       {isConnected && address ? (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
-            <BalanceDisplay balance={balanceData?.formatted} symbol={balanceData?.symbol} />
+            <BalanceDisplay balance={maticBalance?.formatted} symbol={maticBalance?.symbol} />
             <TradeForm />
           </div>
           <div className="space-y-6">
