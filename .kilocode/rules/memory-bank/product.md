@@ -1,44 +1,35 @@
-# Product Context: Next.js Starter Template
+# Product Context: Polygon CEX
 
-## Why This Template Exists
+## Why This Project Exists
 
-Starting a new Next.js project involves boilerplate setup, configuration decisions, and establishing patterns. This template provides a clean, opinionated starting point that eliminates setup friction and establishes best practices from the start. It's optimized for AI-assisted development, where an AI can quickly extend the template based on user requirements.
+A centralized exchange on Polygon Network allowing users to trade cryptocurrencies and transfer funds to/from external wallets. The platform combines traditional exchange features with blockchain-based wallet connectivity.
 
 ## Problems It Solves
 
-1. **Setup Time**: Eliminates boilerplate configuration (TypeScript, Tailwind, ESLint)
-2. **Decision Fatigue**: Pre-made choices for tooling and patterns
-3. **AI Context**: Memory bank provides persistent context for AI assistants
-4. **Extensibility**: Recipe system for adding common features
-5. **Consistency**: Standardized project structure and conventions
+1. **Trading Access**: Simplifies swapping between tokens on Polygon
+2. **Wallet Integration**: Connects external wallets (MetaMask, WalletConnect) for seamless transfers
+3. **Balance Management**: Displays wallet and exchange balances in one interface
 
-## How It Should Work (User Flow)
+## How It Works (User Flow)
 
-1. User starts with this template
-2. User describes what they want to build to AI assistant
-3. AI adds pages, components, and features as needed
-4. AI uses recipes for common additions (database, auth)
-5. User previews changes via hot reload
-6. Iterate until satisfied
-7. Deploy
+1. User visits landing page and connects their wallet via RainbowKit
+2. User navigates to `/exchange` to access trading interface
+3. Wallet balance is displayed using Polygon network (MATIC)
+4. User can send MATIC to external wallets via transfer form
+5. User can place trades through the quick trade interface
+6. Transactions are recorded in the database for tracking
 
 ## Key User Experience Goals
 
-- **Zero to Feature Fast**: Get building immediately, no setup required
-- **AI-Friendly**: Memory bank and recipes make AI assistance effective
-- **Flexible Foundation**: Can become any type of application
-- **Best Practices Built-In**: TypeScript strict mode, ESLint, clean structure
+- **Wallet First**: Connect external wallet to get started
+- **Seamless Transfers**: Send funds to any Polygon address
+- **Fast Trading**: Quick token swaps with form interface
+- **Transaction History**: Track deposits and withdrawals
 
-## What This Template Provides
+## Features Implemented
 
-1. **Clean App Structure**: Single page ready for expansion
-2. **Type Safety**: Full TypeScript setup with strict mode
-3. **Modern Styling**: Tailwind CSS 4 ready to use
-4. **Code Quality**: ESLint configured
-5. **Extensibility**: Recipe system for common features
-
-## Integration Points
-
-- **Database**: Use add-database recipe for Drizzle + SQLite
-- **Styling**: Tailwind CSS pre-configured
-- **AI Assistance**: Memory bank for context persistence
+1. **Wallet Connection**: RainbowKit with MetaMask and WalletConnect support
+2. **Balance Display**: Real-time MATIC balance from Polygon network
+3. **External Transfers**: Send MATIC to any external address
+4. **Quick Trade**: Swap interface between ETH, MATIC, USDC, USDT
+5. **Transaction Tracking**: API endpoint for recording transfers

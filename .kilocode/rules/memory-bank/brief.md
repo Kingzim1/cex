@@ -1,48 +1,37 @@
-# Project Brief: Next.js Starter Template
+# Project Brief: Polygon CEX
 
 ## Purpose
 
-This is a minimal Next.js starter template designed for AI-assisted development. It provides a clean foundation that can be extended to build any type of web application through interaction with an AI assistant.
+A centralized cryptocurrency exchange built on Polygon Network with external wallet transfer capabilities. Users can connect their wallets, view balances, trade tokens, and transfer funds to external Polygon addresses.
 
 ## Target Users
 
-- Developers wanting a clean Next.js starting point
-- Users building applications through AI-assisted coding
-- Teams needing a standardized, modern Next.js setup
+- Cryptocurrency traders on Polygon Network
+- Users wanting to swap tokens with wallet integration
+- Traders who need to transfer funds to external addresses
 
-## Core Use Case
+## Core Features
 
-Users describe what they want to build to an AI assistant, which then expands this template by:
-
-1. Adding components and pages as needed
-2. Installing additional dependencies
-3. Setting up databases, authentication, etc. using recipes
-4. Customizing styling and branding
+1. Wallet connection via MetaMask/WalletConnect (RainbowKit)
+2. Real-time balance display on Polygon Network
+3. External wallet transfers (deposit/withdrawal)
+4. Quick trading interface between tokens
+5. Transaction history tracking
 
 ## Key Requirements
 
 ### Must Have
 
-- Modern Next.js 16 setup with App Router
-- TypeScript for type safety
-- Tailwind CSS 4 for styling
-- ESLint for code quality
-- Clean, minimal starting structure
-- Bun as package manager
+- Polygon network integration via wagmi/viem
+- Wallet connectivity (MetaMask, WalletConnect)
+- Database for user and transaction tracking
+- Transfer functionality for external wallets
+- Trade interface for token swaps
 
-### Nice to Have
+### Implemented
 
-- Recipe system for common additions (database, auth)
-- Memory bank for AI context persistence
-- Clear development guidelines
-
-## Success Metrics
-
-- Clean, zero-error TypeScript setup
-- Passing lint and type checks
-
-## Constraints
-
-- Minimal dependencies by default
-- Framework: Next.js 16 + React 19 + Tailwind CSS 4
-- Package manager: Bun
+- [x] Next.js 16 + React 19 + TypeScript
+- [x] Wagmi + RainbowKit for Polygon integration
+- [x] Drizzle ORM with SQLite for data persistence
+- [x] Exchange page at `/exchange`
+- [x] Transfer API at `/api/transfer`
