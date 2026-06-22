@@ -15,8 +15,8 @@
 - [x] Wagmi providers configured for Polygon network
 - [x] Exchange page with trading interface
 - [x] Balance display component
-- [x] External wallet transfer form (MATIC transfers)
-- [x] Transfer API route for deposits/withdrawals
+- [x] External wallet transfer form (MATIC/ZIMAX transfers)
+- [x] ZIMAX token added to trading pairs
 
 ## Current Structure
 
