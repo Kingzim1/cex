@@ -59,7 +59,14 @@ bun typecheck      # Run TypeScript type checking
 {
   "next": "^16.1.3", // Framework
   "react": "^19.2.3", // UI library
-  "react-dom": "^19.2.3" // React DOM
+  "react-dom": "^19.2.3", // React DOM
+  "ethers": "^6", // Ethereum/Polygon RPC
+  "wagmi": "^2", // React hooks for blockchain
+  "viem": "^2", // TypeScript interface for Ethereum
+  "@rainbow-me/rainbowkit": "^2", // Wallet connection UI
+  "@tanstack/react-query": "^5", // Data fetching
+  "drizzle-orm": "^0.45.2", // Database ORM
+  "@kilocode/app-builder-db": "github:Kilo-Org/app-builder-db#main" // Database client
 }
 ```
 
@@ -69,12 +76,13 @@ bun typecheck      # Run TypeScript type checking
 {
   "typescript": "^5.9.3",
   "@types/node": "^24.10.2",
-  "@types/react": "^19.2.7",
+  "@types/react": "^19.2.17",
   "@types/react-dom": "^19.2.3",
   "@tailwindcss/postcss": "^4.1.17",
   "tailwindcss": "^4.1.17",
   "eslint": "^9.39.1",
-  "eslint-config-next": "^16.0.0"
+  "eslint-config-next": "^16.0.0",
+  "drizzle-kit": "^0.31.10" // Database migrations
 }
 ```
 
@@ -87,16 +95,31 @@ bun typecheck      # Run TypeScript type checking
 ├── bun.lock                # Bun lockfile
 ├── next.config.ts          # Next.js configuration
 ├── tsconfig.json           # TypeScript configuration
+├── drizzle.config.ts       # Drizzle ORM configuration
 ├── postcss.config.mjs      # PostCSS (Tailwind) config
 ├── eslint.config.mjs       # ESLint configuration
 ├── public/                 # Static assets
 │   └── .gitkeep
 └── src/                    # Source code
-    └── app/                # Next.js App Router
-        ├── layout.tsx      # Root layout
-        ├── page.tsx        # Home page
-        ├── globals.css     # Global styles
-        └── favicon.ico     # Site icon
+    ├── app/                # Next.js App Router
+    │   ├── layout.tsx      # Root layout with providers
+    │   ├── page.tsx        # Landing page
+    │   ├── exchange/       # Exchange pages
+    │   │   └── page.tsx    # Trading interface
+    │   ├── api/            # API routes
+    │   │   └── transfer/   # Transfer endpoint
+    │   │       └── route.ts
+    │   ├── globals.css     # Global styles
+    │   └── favicon.ico     # Site icon
+    ├── components/         # React components
+    │   ├── providers.tsx   # Wagmi/RainbowKit providers
+    │   ├── balance-display.tsx
+    │   ├── transfer-form.tsx
+    │   └── trade-form.tsx
+    └── db/                 # Database files
+        ├── index.ts        # Database client
+        ├── schema.ts       # Table definitions
+        └── migrations/     # Auto-generated migrations
 ```
 
 ## Technical Constraints
