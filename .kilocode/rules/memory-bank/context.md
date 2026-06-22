@@ -38,3 +38,4 @@
 | Date | Changes |
 |------|---------|
 | 2026-06-22 | Created Polygon CEX with external wallet transfers feature |
+| 2026-06-22 | Fixed use client directive on exchange page |
